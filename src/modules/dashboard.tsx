@@ -1,15 +1,15 @@
-import React from "react"
-import Countries from "./countries"
-import Login from "./login"
-import useToken from "./login/useToken"
+import React from "react";
+import Countries from "./countries";
+import Login from "./login";
+import useToken from "./login/useToken";
 
 const Dashboard: React.FunctionComponent = () => {
-  const { token, setToken } = useToken()
+  const { token, setToken } = useToken();
 
   if (!token) {
-    return <Login setToken={setToken} />
+    return <Login setToken={setToken} />;
   }
-  return <Countries />
-}
+  return <Countries />;
+};
 
-export default Dashboard
+export default Dashboard;

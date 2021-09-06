@@ -1,6 +1,6 @@
-import React from "react"
-import { Button, Spinner } from "react-bootstrap"
-import { Country } from "../../data/country"
+import React from "react";
+import { Button, Spinner } from "react-bootstrap";
+import { Country } from "../../data/country";
 
 interface Props {
   country: Country;
@@ -26,7 +26,7 @@ const CountryItem: React.FunctionComponent<Props> = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CountryItem
+export default CountryItem;

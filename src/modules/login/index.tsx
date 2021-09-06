@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { Button, Form } from "react-bootstrap"
-import login from "../../data/login"
+import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import login from "../../data/login";
 
 interface Props {
   setToken: (token: any) => void;
@@ -8,21 +8,21 @@ interface Props {
 
 // Login page renders the login component
 const Login: React.FunctionComponent<Props> = ({ setToken }) => {
-  const [username, setUserName] = useState<string>()
-  const [password, setPassword] = useState<string>()
+  const [username, setUserName] = useState<string>();
+  const [password, setPassword] = useState<string>();
 
   const onLoginSubmit = async (): Promise<void> => {
     if (username && password) {
       const token = await login({
-        username
-      })
+        username,
+      });
       if (token && token.token) {
-        setToken(token)
+        setToken(token);
       } else {
-        alert("Can't login user")
+        alert("Can't login user");
       }
     }
-  }
+  };
 
   return (
     <div>
@@ -55,7 +55,7 @@ const Login: React.FunctionComponent<Props> = ({ setToken }) => {
         </Form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

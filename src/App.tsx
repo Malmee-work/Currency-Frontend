@@ -1,5 +1,5 @@
-import "./App.scss"
-import Dashboard from "./modules/dashboard"
+import "./App.scss";
+import Dashboard from "./modules/dashboard";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <Dashboard />
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

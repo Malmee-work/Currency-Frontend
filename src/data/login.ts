@@ -1,9 +1,7 @@
-import client from "../utils/fetch-client"
+import client from "../utils/fetch-client";
 
-const login = async (credentials: {
-  username: string;
-}): Promise<any> => {
-  return client("login", credentials)
-}
+const login = async (credentials: { username: string }): Promise<any> => {
+  return client("login", credentials);
+};
 
-export default login
+export default login;

@@ -1,4 +1,4 @@
-import client from "./fetch-client"
+import client from "./fetch-client";
 
 // GraphQL client to be used for Grapghql requests.
 const handler = async (
@@ -11,20 +11,20 @@ const handler = async (
     const result = await client("graphql", {
       query,
       variables: params || {},
-    })
+    });
 
     if (result.errors && result.errors.length > 0) {
-      return [true, result.errors[0].message]
+      return [true, result.errors[0].message];
     }
 
     if (selectorFn(result)) {
-      return [false, selectorFn(result)]
+      return [false, selectorFn(result)];
     }
 
-    return [true, errorMsg]
+    return [true, errorMsg];
   } catch (error) {
-    return [true, errorMsg]
+    return [true, errorMsg];
   }
-}
+};
 
-export default handler
+export default handler;

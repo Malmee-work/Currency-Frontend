@@ -1,9 +1,9 @@
-import { stripIndents } from "common-tags"
-import handler from "../utils/graphql-client"
-import { Country } from "./country"
+import { stripIndents } from "common-tags";
+import handler from "../utils/graphql-client";
+import { Country } from "./country";
 
-type SuccessResponse = [boolean, Country]
-type ErrorResponse = [boolean, any]
+type SuccessResponse = [boolean, Country];
+type ErrorResponse = [boolean, any];
 
 const getCountry = async (
   name: string
@@ -18,14 +18,14 @@ const getCountry = async (
         rate
       }
     }
-  }`
+  }`;
 
   return handler(
     query,
     { name },
     "Error occurred when fetching the countries list",
     (r) => r.data.countries[0]
-  )
-}
+  );
+};
 
-export default getCountry
+export default getCountry;

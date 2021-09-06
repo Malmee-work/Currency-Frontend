@@ -1,23 +1,23 @@
-import React, { useState } from "react"
-import { FormControl, InputGroup, Table } from "react-bootstrap"
-import { Country } from "../../data/country"
-import CountryCurrencyItem from "./country-currency-item"
+import React, { useState } from "react";
+import { FormControl, InputGroup, Table } from "react-bootstrap";
+import { Country } from "../../data/country";
+import CountryCurrencyItem from "./country-currency-item";
 
 interface Props {
-  countries: Array<Country>
+  countries: Array<Country>;
 }
 // Country Currency page renders the selected list of countries
 const CountryCurrency: React.FunctionComponent<Props> = ({ countries }) => {
-  const [amount, setAmount] = useState<string>("")
+  const [amount, setAmount] = useState<string>("");
 
   const onAmountChange = async (event: any): Promise<void> => {
     if (
       /^\d*(\.\d*)?$/.test(event.target.value.trim()) &&
       event.target.value.length < 30
     ) {
-      setAmount(event.target.value)
+      setAmount(event.target.value);
     }
-  }
+  };
 
   return (
     <div>
@@ -41,12 +41,16 @@ const CountryCurrency: React.FunctionComponent<Props> = ({ countries }) => {
         </thead>
         <tbody>
           {countries.map((country) => (
-            <CountryCurrencyItem key={`selected${country.name}`} country={country} amount={amount} />
+            <CountryCurrencyItem
+              key={`selected${country.name}`}
+              country={country}
+              amount={amount}
+            />
           ))}
         </tbody>
       </Table>
     </div>
-  )
-}
+  );
+};
 
-export default CountryCurrency
+export default CountryCurrency;

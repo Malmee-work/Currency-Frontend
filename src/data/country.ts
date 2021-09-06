@@ -1,8 +1,8 @@
-import { Currency } from "./currency"
+import { Currency } from "./currency";
 
 export type Country = {
-  name: string
-  population?: string
-  currencies?: Array<Currency>
-  alreadyAdded?: boolean
-}
+  name: string;
+  population?: string;
+  currencies?: Array<Currency>;
+  alreadyAdded?: boolean;
+};
