@@ -1,0 +1,57 @@
+.countries-title {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.country-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.countries-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countries-search {
+    width: 30%;
+padding-left:3rem;
+padding-right:3rem;
+
+}
+
+.countries-selected {
+    width: 60%;
+    padding-left:3rem;
+padding-right:3rem;
+}
+
+.selected-item {
+    display: flex;
+    justify-content: space-between;
+
+    .selected-double {
+        width: 40%;
+    }
+    
+    .selected-single {
+        width: 20%;
+    }
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout {
+    position:absolute;
+   top:0;
+   right:0;
+   padding-right: 2rem;
+   padding-top: 1rem;;
+}
+
