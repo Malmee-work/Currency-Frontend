@@ -1,11 +1,5 @@
 # Currency - Frontend
-An application to save search for countries by name and get relevant information about the countries including the exchange rates to SEK
-
-## Note
-1. The given third party api returns a list of photos for a particular user, as the url for each photo contains a link which gives random photos each time we access it,
-through this app, the favourite photos are saved as a blob.
-
-2. As User management is not handled through this app, a default user is used for the implementation.
+An application to search for countries by name and get relevant information about the countries including the exchange rates to SEK
 
 ## Getting Started - How to run Currency - Frontend locally
 
